@@ -177,19 +177,11 @@ JAZZMIN_SETTINGS = {
     "topmenu_links": [
         {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
         {"name": "Tenants Directory", "model": "tenants.Tenants"},
-        {"name": "Tenant Modules", "model": "tenants.TenantModules"},
-        {"name": "Payments Log", "model": "payments.Payments"}, 
-        {"name": "Support System", "url": "https://support.apexerp.com", "new_window": True},
-    ],
-
-    #############
-    # User Menu #
-    #############
-
-    # Additional links to include in the user menu on the top right
-    "usermenu_links": [
-        {"name": "Support Ticket", "url": "https://support.apexerp.com", "new_window": True},
-        {"model": "users.Users"}
+        {"name": "Modules", "model": "module.Module"},
+        {"name": "Users", "model": "users.Users"},
+        {"name": "Payments", "model": "payments.Payments"},
+        {"name": "Orders", "model": "orders.Orders"},
+        # {"name": "Support System", "url": "https://support.apexerp.com", "new_window": True},
     ],
 
     #############
@@ -241,6 +233,8 @@ JAZZMIN_SETTINGS = {
         "module.Module": "fas fa-box-open",
         "module.ModulePrice": "fas fa-tags",
         "users.Users": "fas fa-user-shield",
+        "orders.Orders": "fas fa-file-invoice-dollar",
+        "payments.Payments": "fas fa-money-bill-wave",
     },
     
     # Icons used when one is not manually specified

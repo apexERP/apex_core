@@ -28,7 +28,7 @@
 
                 <!-- Desktop CTA Button -->
                 <div class="hidden md:flex">
-                    <button class="btn-primary px-6 py-2 rounded-lg text-sm">Request Demo</button>
+                    <a href="{% url 'apps.orders:create_order' %}" class="btn-primary px-6 py-2 rounded-lg text-sm">Request Demo</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -49,7 +49,7 @@
             <a href="#features" class="block text-xl text-gray-700 hover:text-cyan-700 transition">Features</a>
             <a href="#modules" class="block text-xl text-gray-700 hover:text-cyan-700 transition">Modules</a>
             <a href="#contact" class="block text-xl text-gray-700 hover:text-cyan-700 transition">Contact Us</a>
-            <button class="btn-primary w-full px-6 py-3 rounded-lg text-sm">Request Demo</button>
+            <a href="{% url 'apps.orders:create_order' %}" class="btn-primary w-full px-6 py-3 rounded-lg text-sm">Request Demo</a>
         </div>
     </div>
 
@@ -64,8 +64,8 @@
                     Seamlessly manage multiple tenant companies from a unified dashboard. Scale your operations with multi-tenant architecture, advanced analytics, and AI-driven automation.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up" style="animation-delay: 0.2s;">
-                    <button class="btn-primary px-8 py-4 rounded-lg font-semibold">Get Started</button>
-                    <button class="btn-secondary px-8 py-4 rounded-lg font-semibold">Watch Overview</button>
+                    <a href="{% url 'apps.orders:create_order' %}" class="btn-primary px-8 py-4 rounded-lg font-semibold">Get Started</a>
+                    <a href="{% url 'apps.orders:create_order' %}" class="btn-secondary px-8 py-4 rounded-lg font-semibold">Watch Overview</a>
                 </div>
             </div>
         </div>
