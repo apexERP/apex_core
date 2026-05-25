@@ -181,6 +181,7 @@ JAZZMIN_SETTINGS = {
         {"name": "Users", "model": "users.Users"},
         {"name": "Payments", "model": "payments.Payments"},
         {"name": "Orders", "model": "orders.Orders"},
+        {"name": "Device Logs", "model": "landing.DeviceLog"},
         # {"name": "Support System", "url": "https://support.apexerp.com", "new_window": True},
     ],
 
@@ -194,8 +195,7 @@ JAZZMIN_SETTINGS = {
     # Whether to auto expand the menu
     "navigation_expanded": True,
 
-    # Hide these apps from the side menu (Kept 'landing', unhidden payments/orders for better financial visibility)
-    "hide_apps": ["landing"],
+    "hide_apps": [],
 
     # Hide these models when generating side menu
     "hide_models": [],
@@ -214,6 +214,8 @@ JAZZMIN_SETTINGS = {
         "users.Users",
         "auth",
         "auth.Group",
+        "landing",
+        "landing.DeviceLog",
     ],
 
     # Custom icons for side menu apps/models (FontAwesome 5 free icons)
@@ -235,6 +237,8 @@ JAZZMIN_SETTINGS = {
         "users.Users": "fas fa-user-shield",
         "orders.Orders": "fas fa-file-invoice-dollar",
         "payments.Payments": "fas fa-money-bill-wave",
+        "landing": "fas fa-satellite-dish",
+        "landing.DeviceLog": "fas fa-desktop",
     },
     
     # Icons used when one is not manually specified
