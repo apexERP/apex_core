@@ -52,3 +52,9 @@ class Users(AbstractBaseUser, PermissionsMixin):
 
     def __repr__(self):
         return f"{self.email} {self.role}"
+    
+    
+    class Meta:
+        db_table = 'users'
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'

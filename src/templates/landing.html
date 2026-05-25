@@ -1,0 +1,883 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apex ERP - The AI-Powered Operating System for Modern Enterprise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="antialiased">
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full top-0 z-50 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-800"><span class="accent-cyan">apex</span><span class="text-gray-900">ERP</span></span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-cyan-700 transition font-500">Features</a>
+                    <a href="#modules" class="text-gray-600 hover:text-cyan-700 transition font-500">Modules</a>
+                    <a href="#contact" class="text-gray-600 hover:text-cyan-700 transition font-500">Contact Us</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex">
+                    <button class="btn-primary px-6 py-2 rounded-lg text-sm">Request Demo</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-cyan-700 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="pt-20 px-6 space-y-6">
+            <a href="#features" class="block text-xl text-gray-700 hover:text-cyan-700 transition">Features</a>
+            <a href="#modules" class="block text-xl text-gray-700 hover:text-cyan-700 transition">Modules</a>
+            <a href="#contact" class="block text-xl text-gray-700 hover:text-cyan-700 transition">Contact Us</a>
+            <button class="btn-primary w-full px-6 py-3 rounded-lg text-sm">Request Demo</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center">
+                <h1 class="text-gray-900 mb-6 fade-in-up">
+                    The AI-Powered Operating System for Modern Enterprise
+                </h1>
+                <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto fade-in-up" style="animation-delay: 0.1s;">
+                    Seamlessly manage multiple tenant companies from a unified dashboard. Scale your operations with multi-tenant architecture, advanced analytics, and AI-driven automation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up" style="animation-delay: 0.2s;">
+                    <button class="btn-primary px-8 py-4 rounded-lg font-semibold">Get Started</button>
+                    <button class="btn-secondary px-8 py-4 rounded-lg font-semibold">Watch Overview</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Overview / Value Prop -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-gray-900 text-center mb-16">Why Choose apex ERP</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="stat-card">
+                    <div class="text-4xl font-800 accent-cyan mb-2">99.9%</div>
+                    <p class="text-gray-700 font-600">Uptime SLA</p>
+                    <p class="text-sm text-gray-600 mt-2">Enterprise-grade reliability with zero downtime deployments</p>
+                </div>
+                <div class="stat-card">
+                    <div class="text-4xl font-800 accent-emerald mb-2">10x</div>
+                    <p class="text-gray-700 font-600">Operational Speed</p>
+                    <p class="text-sm text-gray-600 mt-2">AI-accelerated workflows and real-time analytics</p>
+                </div>
+                <div class="stat-card">
+                    <div class="text-4xl font-800 accent-violet mb-2">1</div>
+                    <p class="text-gray-700 font-600">Unified Data Core</p>
+                    <p class="text-sm text-gray-600 mt-2">Single source of truth for all tenant operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ERP Module Ecosystem Grid -->
+    <section id="modules" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-gray-900 text-center mb-4">Complete Enterprise Module Ecosystem</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Comprehensive, integrated modules designed to streamline every aspect of your business operations. Click on any module to view pricing tiers.</p>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap gap-3 justify-center mb-12">
+                <button class="filter-tab active" data-filter="all">All Modules</button>
+                <button class="filter-tab" data-filter="commerce">Core Commerce</button>
+                <button class="filter-tab" data-filter="operations">Operations & Finance</button>
+                <button class="filter-tab" data-filter="intelligence">Intelligence & Analytics</button>
+            </div>
+
+            <!-- Module Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- POS Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="commerce" data-module="pos">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2"></rect>
+                            <path d="M1 10h22"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">Point of Sale</h3>
+                    <p class="text-sm text-gray-600">High-speed, offline-first checkout system with real-time synchronization across all points of sale</p>
+                    <div class="module-pricing-wrapper" data-module-id="pos">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$100</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Basic POS</li>
+                                    <li>1 Branch</li>
+                                    <li>Basic Reports</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$200</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Advanced POS</li>
+                                    <li>5 Branches</li>
+                                    <li>Inventory Integration</li>
+                                    <li>Analytics</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$300</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Unlimited Branches</li>
+                                    <li>AI Analytics</li>
+                                    <li>Priority Support</li>
+                                    <li>API Access</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Commerce Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="commerce" data-module="e_commerce">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">E-Commerce</h3>
+                    <p class="text-sm text-gray-600">Headless digital storefront architectures with omnichannel inventory synchronization</p>
+                    <div class="module-pricing-wrapper" data-module-id="e_commerce">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$150</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Online Store</li>
+                                    <li>Product Catalog</li>
+                                    <li>Basic Checkout</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$300</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Multi Vendor</li>
+                                    <li>Advanced Payments</li>
+                                    <li>Discount System</li>
+                                    <li>Analytics</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$500</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>AI Recommendations</li>
+                                    <li>Marketplace Features</li>
+                                    <li>Custom API</li>
+                                    <li>Enterprise Scaling</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B2B Market Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="commerce" data-module="b2b_market">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">B2B Marketplace</h3>
+                    <p class="text-sm text-gray-600">Wholesaler portal with bulk ordering, custom contract pricing, and dealer management</p>
+                    <div class="module-pricing-wrapper" data-module-id="b2b_market">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$200</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Supplier Management</li>
+                                    <li>Company Profiles</li>
+                                    <li>Basic Orders</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$400</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Bulk Orders</li>
+                                    <li>RFQ System</li>
+                                    <li>Contract Management</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$700</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Enterprise Procurement</li>
+                                    <li>AI Matching</li>
+                                    <li>Advanced Analytics</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inventory Management Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="operations" data-module="inventory">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">Inventory Management</h3>
+                    <p class="text-sm text-gray-600">Real-time multi-warehouse tracking, stock auditing, and automated reorder point management</p>
+                    <div class="module-pricing-wrapper" data-module-id="inventory">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$120</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Stock Tracking</li>
+                                    <li>Single Warehouse</li>
+                                    <li>Basic Reports</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$250</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Multi Warehouse</li>
+                                    <li>Barcode Support</li>
+                                    <li>Stock Transfers</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$450</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>AI Forecasting</li>
+                                    <li>Automation</li>
+                                    <li>Advanced Warehousing</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accounting Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="operations" data-module="accounting">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M2 12h20"></path>
+                            <path d="M12 6v12M6 12h12"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">Accounting</h3>
+                    <p class="text-sm text-gray-600">Automated ledgers, multi-currency matching, tax compliance, and financial reconciliation</p>
+                    <div class="module-pricing-wrapper" data-module-id="accounting">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$180</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Invoices</li>
+                                    <li>Expenses</li>
+                                    <li>Basic Accounting</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$350</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Payroll</li>
+                                    <li>Tax Management</li>
+                                    <li>Financial Reports</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$600</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Multi Company</li>
+                                    <li>AI Analytics</li>
+                                    <li>Audit Tools</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manufacturing Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="operations" data-module="manufacturing">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.4 14.4L9.6 9.6"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">Manufacturing</h3>
+                    <p class="text-sm text-gray-600">MRP tracking, bill of materials (BOM), and shop floor routing with production analytics</p>
+                    <div class="module-pricing-wrapper" data-module-id="manufacturing">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$250</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Production Orders</li>
+                                    <li>BOM</li>
+                                    <li>Basic Scheduling</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$500</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>MRP</li>
+                                    <li>Quality Control</li>
+                                    <li>Machine Tracking</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$900</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>AI Optimization</li>
+                                    <li>IoT Integration</li>
+                                    <li>Advanced Planning</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HR Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="operations" data-module="hr">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">Human Resources</h3>
+                    <p class="text-sm text-gray-600">Payroll automation, shift scheduling, performance metrics, and talent management</p>
+                    <div class="module-pricing-wrapper" data-module-id="hr">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$100</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Employee Records</li>
+                                    <li>Attendance</li>
+                                    <li>Basic HR</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$220</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Payroll</li>
+                                    <li>Recruitment</li>
+                                    <li>Performance Tracking</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$400</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>AI Recruitment</li>
+                                    <li>Advanced Analytics</li>
+                                    <li>Employee Self Service</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logistics Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="operations" data-module="logistics">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">Logistics</h3>
+                    <p class="text-sm text-gray-600">Route optimization, fleet tracking, and last-mile delivery status with customer notifications</p>
+                    <div class="module-pricing-wrapper" data-module-id="logistics">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$170</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Shipment Tracking</li>
+                                    <li>Basic Fleet</li>
+                                    <li>Delivery Reports</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$350</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Fleet Management</li>
+                                    <li>GPS Tracking</li>
+                                    <li>Route Optimization</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$650</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>AI Logistics</li>
+                                    <li>Real-Time Monitoring</li>
+                                    <li>Enterprise Scaling</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- apex pay Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="intelligence" data-module="apex_pay">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">apex pay</h3>
+                    <p class="text-sm text-gray-600">Native multi-tenant global payment processing gateway with settlement and compliance</p>
+                    <div class="module-pricing-wrapper" data-module-id="apex_pay">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$80</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Payment Gateway</li>
+                                    <li>Transactions</li>
+                                    <li>Basic Security</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$180</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Subscriptions</li>
+                                    <li>Fraud Detection</li>
+                                    <li>Advanced Reports</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$350</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>AI Fraud Protection</li>
+                                    <li>Multi Currency</li>
+                                    <li>Enterprise APIs</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- apex AI Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="intelligence" data-module="apex_ai">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">apex AI</h3>
+                    <p class="text-sm text-gray-600">Predictive procurement analytics, demand forecasting, and automated workflow agents</p>
+                    <div class="module-pricing-wrapper" data-module-id="apex_ai">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$300</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Basic AI Assistant</li>
+                                    <li>Automation</li>
+                                    <li>Predictions</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$600</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Advanced AI</li>
+                                    <li>Workflow Automation</li>
+                                    <li>Custom Models</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$1200</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Enterprise AI</li>
+                                    <li>Private AI Models</li>
+                                    <li>Full AI Platform</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- apex BI Module -->
+                <div class="module-card cursor-pointer module-toggle" data-category="intelligence" data-module="apex_bi">
+                    <div class="module-icon">
+                        <svg class="icon-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="2" x2="12" y2="22"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-gray-900 font-600 mb-2">apex BI</h3>
+                    <p class="text-sm text-gray-600">Immersive, interactive executive dashboards with real-time reporting and data visualization</p>
+                    <div class="module-pricing-wrapper" data-module-id="apex_bi">
+                        <div class="pricing-grid">
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-standard">Standard</span>
+                                <div class="price-display">$150</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Dashboards</li>
+                                    <li>Reports</li>
+                                    <li>Basic Charts</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card">
+                                <span class="pricing-tier tier-pro">Pro</span>
+                                <div class="price-display">$320</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>Advanced Analytics</li>
+                                    <li>Real-Time Data</li>
+                                    <li>Custom Dashboards</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-card featured">
+                                <span class="pricing-tier tier-premium">Premium</span>
+                                <div class="price-display">$700</div>
+                                <div class="price-period">per month</div>
+                                <ul class="feature-list">
+                                    <li>AI Insights</li>
+                                    <li>Big Data Analytics</li>
+                                    <li>Enterprise BI</li>
+                                </ul>
+                                <button class="btn-primary w-full py-2 rounded text-sm mt-4">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tenant Architecture Visual Block -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-blue-50 to-transparent">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-gray-900 text-center mb-4">Multi-Tenant Architecture at Scale</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">One administrator. Unlimited companies. Seamless management from a single unified dashboard</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Master Admin -->
+                <div class="tenant-box lg:col-span-1">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-gray-900 font-600 text-center mb-2">Master Admin</h3>
+                    <p class="text-sm text-gray-600 text-center">Central control over all tenant configurations, user access, and integrations</p>
+                </div>
+
+                <!-- Central Dashboard -->
+                <div class="tenant-box lg:col-span-1">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-lg flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-gray-900 font-600 text-center mb-2">Unified Dashboard</h3>
+                    <p class="text-sm text-gray-600 text-center">Real-time visibility across all tenants with aggregated KPIs and analytics</p>
+                </div>
+
+                <!-- Tenant Management -->
+                <div class="tenant-box lg:col-span-1">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-violet-400 to-emerald-500 rounded-lg flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5.581m0 0H9m0 0h5.581M9 9h.008v.008H9V9m5 0h.008v.008h-.008V9m-9 9h.008v.008H5v-.008zm5 0h.008v.008h-.008v-.008zm5 0h.008v.008h-.008v-.008z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-gray-900 font-600 text-center mb-2">Tenant Management</h3>
+                    <p class="text-sm text-gray-600 text-center">Provision, configure, and manage multiple independent companies instantly</p>
+                </div>
+            </div>
+
+            <!-- Data Flow Visualization -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-3 items-center">
+                <div class="h-12 bg-gradient-to-r from-cyan-100 to-emerald-100 rounded-lg flex items-center justify-center text-sm font-600 text-cyan-700">Tenant A</div>
+                <div class="text-center text-gray-400">↔</div>
+                <div class="h-12 bg-gradient-to-r from-emerald-100 to-violet-100 rounded-lg flex items-center justify-center text-sm font-600 text-emerald-700">Central Core</div>
+                <div class="text-center text-gray-400">↔</div>
+                <div class="h-12 bg-gradient-to-r from-violet-100 to-cyan-100 rounded-lg flex items-center justify-center text-sm font-600 text-violet-700">Tenant B</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Discovery Form Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Left Content -->
+                <div>
+                    <h2 class="text-gray-900 mb-6">Ready to Transform Your Enterprise?</h2>
+                    <p class="text-gray-600 mb-4">
+                        Whether you're looking to deploy apex ERP for a single tenant or manage hundreds of independent companies, our system integration team is ready to support your success.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        We provide dedicated onboarding, custom integrations, and ongoing enterprise support to ensure your deployment exceeds expectations.
+                    </p>
+
+                    <div class="space-y-6 mt-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-900 font-600 mb-1">Enterprise Tenant Queries</h4>
+                                <p class="text-sm text-gray-600">Detailed discussions about multi-tenant architecture, scalability, and data isolation</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 bg-gradient-to-br from-emerald-500 to-violet-500 rounded flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-900 font-600 mb-1">Partnership Opportunities</h4>
+                                <p class="text-sm text-gray-600">Reseller programs, API integrations, and strategic collaborations</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 bg-gradient-to-br from-violet-500 to-cyan-500 rounded flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-900 font-600 mb-1">Custom Enterprise Quotes</h4>
+                                <p class="text-sm text-gray-600">Volume discounts, bespoke modules, and tailored deployment strategies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div>
+                    <div class="glass rounded-2xl p-8">
+                        <h3 class="text-gray-900 font-700 mb-6">Submit Your Enterprise Request</h3>
+                        
+                        <form id="enterprise-form" class="space-y-4 hidden">
+                            <div>
+                                <label class="block text-sm font-500 text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="full-name" placeholder="John Doe" class="form-input w-full" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-500 text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+1 (555) 123-4567" class="form-input w-full" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-500 text-gray-700 mb-2">Corporate Email</label>
+                                <input type="email" id="email" placeholder="name@company.com" class="form-input w-full" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-500 text-gray-700 mb-2">Expected Tenant Count</label>
+                                <select id="tenant-count" class="form-input w-full" required>
+                                    <option value="">Select tenant count...</option>
+                                    <option value="1-10">1 - 10 Tenants</option>
+                                    <option value="11-50">11 - 50 Tenants</option>
+                                    <option value="51-200">51 - 200 Tenants</option>
+                                    <option value="201+">201+ Tenants</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-500 text-gray-700 mb-2">Message</label>
+                                <textarea id="message" placeholder="Tell us about your requirements..." class="form-input w-full h-32 resize-none" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary w-full px-6 py-3 rounded-lg font-semibold mt-6">
+                                Submit Enterprise Request
+                            </button>
+                        </form>
+
+                        <!-- Success Banner -->
+                        <div id="success-banner" class="success-banner hidden">
+                            <div class="flex items-center justify-center gap-3 mb-3">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <h4 class="font-700">Request Submitted Successfully</h4>
+                            </div>
+                            <p class="text-sm">Our system integration team will reach out to you within 2 hours to discuss your enterprise deployment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 py-12 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <span class="text-xl font-800"><span class="accent-cyan">apex</span><span class="text-gray-900">ERP</span></span>
+                    <p class="text-gray-600 text-sm mt-2">The AI-powered operating system for modern enterprise</p>
+                </div>
+
+                <!-- Product -->
+                <div>
+                    <h4 class="text-gray-900 font-600 mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-cyan-700 transition">Features</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-cyan-700 transition">Modules</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-cyan-700 transition">Pricing</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-cyan-700 transition">Security</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-gray-900 font-600 mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-cyan-700 transition">About</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-cyan-700 transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-cyan-700 transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-cyan-700 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div>
+                    <h4 class="text-gray-900 font-600 mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center hover:bg-cyan-100 transition">
+                            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20v-7.21H5.33V9.25h2.96V7.33c0-2.96 1.79-4.54 4.45-4.54 1.26 0 2.36.09 2.68.13v3.1h-1.84c-1.44 0-1.72.68-1.72 1.68v2.2h3.44l-.44 3.54h-3v7.21h-3.6z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center hover:bg-cyan-100 transition">
+                            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 9-2 9-7v-1.5a4.65 4.65 0 00.5-2z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center hover:bg-cyan-100 transition">
+                            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-200 pt-8 mt-8 text-center text-sm text-gray-600">
+                <p>&copy; 2024 apexERP Ltd. All rights reserved. | <a href="#" class="hover:text-cyan-700 transition">Privacy Policy</a> | <a href="#" class="hover:text-cyan-700 transition">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/script.js' %}">
+
+    </script>
+</body>
+</html>
