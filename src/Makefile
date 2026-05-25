@@ -11,3 +11,5 @@ shell:
 	poetry run python manage.py shell
 
 
+createsuperuser:
+	poetry run python manage.py createsuperuser
