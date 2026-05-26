@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Login — apex ERP{% endblock %}
+{% block subtitle %}Sign in to your account{% endblock %}
+{% block card_title %}Welcome back{% endblock %}
+
+{% block content %}
+<form action="" method="post" class="auth-form space-y-5">
+    {% csrf_token %}
+
+    <div>
+        <label for="{{ form.email.id_for_label }}" class="block text-sm font-500 text-gray-700 mb-1">Email</label>
+        {{ form.email }}
+        {% if form.email.errors %}
+        <p class="text-red-500 text-xs mt-1">{{ form.email.errors|join:", " }}</p>
+        {% endif %}
+    </div>
+
+    <div>
+        <label for="{{ form.password.id_for_label }}" class="block text-sm font-500 text-gray-700 mb-1">Password</label>
+        <div class="relative">
+            {{ form.password }}
+            <button type="button" onclick="togglePassword('{{ form.password.id_for_label }}', this)"
+                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-cyan-600 transition">
+                <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+            </button>
+        </div>
+        {% if form.password.errors %}
+        <p class="text-red-500 text-xs mt-1">{{ form.password.errors|join:", " }}</p>
+        {% endif %}
+    </div>
+
+    {% if form.non_field_errors %}
+    <div class="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-red-600 text-sm">
+        {{ form.non_field_errors|join:", " }}
+    </div>
+    {% endif %}
+
+    <button type="submit" class="btn-primary w-full px-6 py-3 rounded-lg font-semibold mt-2">
+        Sign In
+    </button>
+</form>
+
+<p class="text-center text-sm text-gray-500 mt-6">
+    Don't have an account?
+    <a href="{% url 'apps.users:register' %}" class="accent-cyan font-500 hover:underline">Register</a>
+</p>
+{% endblock %}
