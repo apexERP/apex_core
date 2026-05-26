@@ -182,6 +182,7 @@ JAZZMIN_SETTINGS = {
         {"name": "Payments", "model": "payments.Payments"},
         {"name": "Orders", "model": "orders.Orders"},
         {"name": "Device Logs", "model": "landing.DeviceLog"},
+        {"name": "Tenant Payments", "model": "payments.TenantPayments"},
         # {"name": "Support System", "url": "https://support.apexerp.com", "new_window": True},
     ],
 
@@ -216,6 +217,8 @@ JAZZMIN_SETTINGS = {
         "auth.Group",
         "landing",
         "landing.DeviceLog",
+        "payments",
+        "payments.TenantPayments",
     ],
 
     # Custom icons for side menu apps/models (FontAwesome 5 free icons)
