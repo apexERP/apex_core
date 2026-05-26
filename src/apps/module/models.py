@@ -24,7 +24,7 @@ class Module(models.Model):
 
 class ModulePrice(models.Model):
     
-    module = models.ForeignKey(Module, on_delete=models.CASCADE)
+    module = models.ForeignKey(Module, on_delete=models.CASCADE, related_name='prices')
 
     standart_price = models.IntegerField(default=0)
     standart_features = models.TextField()
